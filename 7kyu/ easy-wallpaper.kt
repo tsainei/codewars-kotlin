@@ -26,3 +26,17 @@ In Javascript English numbers are preloaded and can be accessed as:
 numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve","thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
 For other languages it is not preloaded but you can use the above one if you need it.
  */
+
+
+package wallpaper
+
+fun wallpaper(l:Double, w:Double, h:Double):String {
+    // your code
+   var num = listOf("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve","thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty")
+   if(h == 0.0 || w == 0.0 || l == 0.0) {
+       return "zero"
+       // h * w *l == 0
+   } else { var roll =  Math.ceil((l*h*2 + w*h*2)*1.15 /(0.52 *10 )).toInt()
+   return num[roll]
+  }
+}
