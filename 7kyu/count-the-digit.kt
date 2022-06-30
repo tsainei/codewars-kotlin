@@ -18,3 +18,21 @@ So there are 11 digits 1 for the squares of numbers between 0 and 25.
 Note that 121 has twice the digit 1.
 
  */
+
+package countdig
+
+fun nbDig(n:Int, d:Int):Int {
+        var num = ""
+        var result= 0
+    for (i in 0..n) {
+      num += i * i
+    }
+
+    var nl= num.split("")
+    for(c in nl) {
+      if(c == d.toString()) {
+      result +=1
+      }
+    }
+   return result
+}
